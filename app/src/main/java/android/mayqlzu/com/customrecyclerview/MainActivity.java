@@ -44,6 +44,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(v.getContext(), OnClickActivity.class));
             }
         });
+
+        Button btnCustomDivider = findViewById(R.id.btn_custom_divider);
+        btnCustomDivider.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), CustomDividerActivity.class));
+            }
+        });
+
     }
 
     @Override

@@ -21,6 +21,7 @@
         </activity>
         <activity android:name=".BasicRecyclerViewActivity"></activity>
         <activity android:name=".OnClickActivity"></activity>
+        <activity android:name=".CustomDividerActivity"></activity>
     </application>
 
 </manifest>

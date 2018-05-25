@@ -22,5 +22,13 @@
         android:layout_height="wrap_content"
         android:text="OnClick"
         android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_custom_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Custom Divider"
+        android:textAllCaps="false" />
+
 </LinearLayout>
 
