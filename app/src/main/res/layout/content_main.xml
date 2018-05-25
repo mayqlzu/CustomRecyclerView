@@ -37,6 +37,13 @@
         android:text="Multiple ViewType"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/btn_swipe_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Swipe Delete"
+        android:textAllCaps="false" />
+
 
 </LinearLayout>
 

@@ -61,6 +61,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button btnSwipeDelete = findViewById(R.id.btn_swipe_delete);
+        btnSwipeDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), SwipeDeleteActivity.class));
+            }
+        });
+
     }
 
     @Override

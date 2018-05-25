@@ -23,6 +23,7 @@
         <activity android:name=".OnClickActivity"></activity>
         <activity android:name=".CustomDividerActivity"></activity>
         <activity android:name=".MultipleViewTypeActivity"></activity>
+        <activity android:name=".SwipeDeleteActivity"></activity>
     </application>
 
 </manifest>
