@@ -22,6 +22,7 @@
         <activity android:name=".BasicRecyclerViewActivity"></activity>
         <activity android:name=".OnClickActivity"></activity>
         <activity android:name=".CustomDividerActivity"></activity>
+        <activity android:name=".MultipleViewTypeActivity"></activity>
     </application>
 
 </manifest>

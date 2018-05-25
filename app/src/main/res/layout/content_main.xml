@@ -30,5 +30,13 @@
         android:text="Custom Divider"
         android:textAllCaps="false" />
 
+    <Button
+        android:id="@+id/btn_multiple_viewtype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Multiple ViewType"
+        android:textAllCaps="false" />
+
+
 </LinearLayout>
 

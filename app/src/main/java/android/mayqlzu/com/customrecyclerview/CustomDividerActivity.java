@@ -17,6 +17,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * reference: https://www.bignerdranch.com/blog/a-view-divided-adding-dividers-to-your-recyclerview-with-itemdecoration/
+ */
 public class CustomDividerActivity extends Activity {
     private RecyclerView rv;
 

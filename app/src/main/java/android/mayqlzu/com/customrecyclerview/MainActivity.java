@@ -53,6 +53,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button btnMultipleViewType = findViewById(R.id.btn_multiple_viewtype);
+        btnMultipleViewType.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), MultipleViewTypeActivity.class));
+            }
+        });
+
     }
 
     @Override
