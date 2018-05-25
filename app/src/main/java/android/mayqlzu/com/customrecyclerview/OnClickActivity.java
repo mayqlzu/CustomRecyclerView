@@ -6,20 +6,23 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BasicRecyclerViewActivity extends Activity {
+public class OnClickActivity extends Activity {
     private RecyclerView rv;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_basic_recyclerview);
+        setContentView(R.layout.activity_onclick);
         rv = findViewById(R.id.rv);
 
         // adapter changes cannot affect the size of the RecyclerView. improve performance.
@@ -43,10 +46,12 @@ public class BasicRecyclerViewActivity extends Activity {
 
         public static class ViewHolder extends RecyclerView.ViewHolder {
             public TextView tv;
+            public Button btn;
 
-            public ViewHolder(TextView tv) {
-                super(tv);
-                this.tv = tv;
+            public ViewHolder(View v) {
+                super(v);
+                this.tv = v.findViewById(R.id.tv);
+                this.btn = v.findViewById(R.id.btn);
             }
         }
 
@@ -58,10 +63,10 @@ public class BasicRecyclerViewActivity extends Activity {
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             //Log.d("mayq", "onCreateViewHolder(), viewType=" + viewType);
 
-            TextView tv = (TextView) LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.layout_text, parent, false);
+            View v = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.layout_item_text_btn, parent, false);
 
-            ViewHolder vh = new ViewHolder(tv);
+            ViewHolder vh = new ViewHolder(v);
 
             return vh;
         }
@@ -71,6 +76,37 @@ public class BasicRecyclerViewActivity extends Activity {
             //Log.d("mayq", "onBindViewHolder(), position=" + position);
 
             holder.tv.setText(dataset[position]);
+
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(holder.itemView.getContext(),
+                            "clicked on item " + dataset[position],
+                            Toast.LENGTH_SHORT)
+                            .show();
+                }
+            });
+
+            holder.tv.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(holder.itemView.getContext(),
+                            "clicked on tv " + dataset[position],
+                            Toast.LENGTH_SHORT)
+                            .show();
+                }
+            });
+
+            holder.btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(holder.itemView.getContext(),
+                            "clicked on btn " + dataset[position],
+                            Toast.LENGTH_SHORT)
+                            .show();
+                }
+            });
+
         }
 
         @Override

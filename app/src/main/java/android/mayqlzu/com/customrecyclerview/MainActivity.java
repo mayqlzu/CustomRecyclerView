@@ -36,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(v.getContext(), BasicRecyclerViewActivity.class));
             }
         });
+
+        Button btnOnClick = findViewById(R.id.btn_onclick);
+        btnOnClick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(v.getContext(), OnClickActivity.class));
+            }
+        });
     }
 
     @Override
